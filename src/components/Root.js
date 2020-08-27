@@ -2,7 +2,7 @@ import React from 'react';
 import PetList from './PetList';
 import axios from 'axios';
 
-import samplePets from '../petdata';
+//import samplePets from '../petdata';
 
 class Root extends React.Component {
   constructor() {
@@ -18,12 +18,10 @@ class Root extends React.Component {
 
   async componentDidMount() {
     try {
-      //this.setState({ loadingData: true });
       const response = await axios.get('/api/pets');
-      this.setState({ pets: response.data });
-      this.setState({ loadingData: false });
+      this.setState({ pets: response.data, loadingData: false });
     } catch (error) {
-      this.setState({ error: error, loadingData: false });
+      this.setState({ error: error });
     }
   }
 
