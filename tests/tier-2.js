@@ -92,7 +92,7 @@ describe('Tier 2: PetList component', () => {
     expect(wrapper).to.not.include.text('Anabelle');
   });
 
-  xit("when the filter is set to 'dogs', only render SinglePets with dogs", () => {
+  it("when the filter is set to 'dogs', only render SinglePets with dogs", () => {
     const wrapper = mount(<PetList pets={pets} />);
 
     // By default, the value of select should be "all"

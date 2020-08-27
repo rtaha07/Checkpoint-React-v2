@@ -8,7 +8,6 @@ class PetList extends React.Component {
       filter: 'all',
     };
   }
-
   render() {
     const { filter } = this.state;
     const { handleDelete } = this.props;
@@ -19,18 +18,15 @@ class PetList extends React.Component {
         case 'all':
           return pet;
         case 'cats':
-          pet.species === 'cat';
-          break;
+          return pet.species === 'cat';
         case 'dogs':
-          pet.species === 'dog';
-          break;
+          return pet.species === 'dog';
       }
     });
-
     return (
       <div>
         <div>
-          <label htmlFor="speciesFilter">Filter by species: </label>
+          <label className="selectSpecies">Select Species: </label>
           <select
             onChange={(event) => {
               this.setState({ filter: event.target.value });

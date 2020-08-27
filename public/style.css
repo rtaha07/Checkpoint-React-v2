@@ -11,8 +11,8 @@ body {
 
 .single-pet {
   width: 15rem;
-  margin: 0.5rem;
-  padding: 0.5rem;
+  margin: 1rem;
+  padding: 1rem;
   background-color: lightcoral;
 }
 
@@ -22,5 +22,5 @@ body {
 
 .delete-pet {
   background-color: orange;
-  margin: 0.5rem;
+  margin: 1rem;
 }
