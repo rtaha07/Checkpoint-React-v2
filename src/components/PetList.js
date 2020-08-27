@@ -26,7 +26,7 @@ class PetList extends React.Component {
     return (
       <div>
         <div>
-          <label className="selectSpecies">Select Species: </label>
+          {/* <label className="selectSpecies">Select Species: </label> */}
           <select
             onChange={(event) => {
               this.setState({ filter: event.target.value });
